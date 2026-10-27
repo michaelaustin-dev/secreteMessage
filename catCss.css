@@ -1,0 +1,258 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    display: flex;
+}
+
+@keyframes movingBackground {
+    0% {
+
+        transform: rotate(0deg);
+    }
+    33% {
+
+        transform: rotate(-3deg);
+    }   
+    66% {
+
+        transform: rotate(3deg);
+    }
+    100% {
+
+        transform: rotate(0deg);
+    }
+
+}
+
+
+
+.blackSection {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blackSection video {
+    margin-top: 80px;
+    width: 25vw;
+}
+.openingText {
+    margin-top: -50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 300%;
+    z-index: 20;
+}
+.nextButton {
+    width: 20%;
+    height: 10vh;
+    border: 0;
+    border-radius: 20px;
+    background-color: rgb(190, 219, 244);
+    box-shadow: 0 0 2px rgb(193, 226, 255);
+}
+.nextButton p {
+    color: rgb(255, 255, 255);
+    font-size: 150%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.nextButton:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 5px rgb(193, 226, 255);
+}
+
+
+
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    filter: blur(5px);
+}
+
+.background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.questionSection {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 20;
+}
+
+.video {
+    margin-top: 60px;
+    height: 250px;
+    width: 250px;
+    pointer-events: none;
+    z-index: 21;
+}
+
+.questionSectionText {
+    margin-top: -10px;
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 10;
+}
+
+.amplop {
+    margin-top: 370px;
+    position: absolute;
+    z-index: 30;
+    height: 150px;
+}
+
+.button {
+    margin-top: 210px;
+    z-index: 40;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+}
+.open {
+    z-index: 30;
+    height: 100px;
+    width: 200px;
+    border: 0px;
+    border-radius: 35px;
+    color: rgb(56, 80, 33);
+    font-size: 200%;
+    font-weight: bolder;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background: linear-gradient(
+        125deg,
+        #a9e17d,
+        #91cd63,
+        #7bb64e,
+        #69a43d,
+        #7bb64e,
+        #91cd63,
+        #a9e17d
+    );
+}
+.closed {
+    transition: 0.2s;
+
+    z-index: 30;
+    height: 100px;
+    width: 200px;
+    border: 0px;
+    border-radius: 35px;
+    color: rgb(74, 15, 15);
+    font-size: 200%;
+    font-weight: bolder;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background: linear-gradient(
+        125deg,
+        #f0685e,
+        #ea594f,
+        #df4d42,
+        #ca2f24,
+        #df4d42,
+        #ea594f,
+        #f0685e
+    );
+}
+
+.open:hover {
+    transform: translateY(2px);
+    animation: movingBackground 2s linear infinite;
+}
+.closed:hover {
+    transform: translateY(2px);
+    animation: movingBackground 2s linear infinite;
+}
+
+
+.back {
+
+    z-index: 50;
+}
+
+
+
+
+
+.falling {
+    position: fixed;
+    top: -50px;
+    animation: fall 5s linear infinite;
+    font-size: 40px;
+}
+
+.falling:nth-child(1) { left: 10%; animation-delay: 0s; }
+.falling:nth-child(2) { left: 30%; animation-delay: 2s; }
+.falling:nth-child(3) { left: 50%; animation-delay: 1s; }
+.falling:nth-child(4) { left: 70%; animation-delay: 3s; }
+.falling:nth-child(5) { left: 90%; animation-delay: 1.5s; }
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+
+.bodyCongrats {
+    background-color: #638aff;
+}
+
+.section {
+    margin: auto;
+    width: 60vw;
+    height: 80vh;
+    background-color: #ebeff8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 45px;
+}
+
+.kicau {
+    position: absolute;
+    transform: rotate(-15deg);
+    margin-left: 700px;
+    margin-bottom: 550px;
+}
+
+.dhane {
+    height: 45%;
+    border-radius: 25%;
+}
+
+.congratsText {
+    margin-top: 2%;
+    width: 85%;
+    height: 40%;
+    font-size: 105%;
+    text-align: left;
+    background-color: #cfddf7;
+    border: 0px;
+    border-radius: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 20px;
+}
